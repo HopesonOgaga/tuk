@@ -3,61 +3,72 @@ import Header from "./nav/header";
 import Footer from "./nav/footer";
 import VideoCarousel from "../constants/carouse";
 import AboutTikTub from "../constants/about";
+import ArtistGrid from "../constants/card";
 
 function Home() {
   return (
     <div className="min-h-screen bg-gray-100">
       <Header />
 
-      <section className="px-6 pt-16 pb-24">
-        <div className=" flex justify-around  ">
+      {/* HERO SECTION */}
+      <section className="px-6 pt-20 pb-28">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+
           {/* Text */}
-          <div className="space-y-5 text-center md:text-left flex flex-col gap-6">
-            <h1 className="text-5xl md:text-6xl font-extrabold text-slate-900 leading-tight capitalize ">
-              listen on <br></br> tok
-              <span className="text-orange-500">tub</span> 🎧
+          <div className="space-y-6 text-center md:text-left">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-slate-900 leading-tight capitalize">
+              listen on <br />
+              tok<span className="text-orange-500">tub</span> 🎧
             </h1>
 
-            <p className="text-sm  text-slate-700 max-w-md mx-auto md:mx-0 leading-relaxed tracking-normal ">
+            <p className="text-sm sm:text-base text-slate-700 max-w-md mx-auto md:mx-0 leading-relaxed">
               Discover your favorite TikTok creators, catch trending sounds
               early, and stay tapped into what’s hot every day. Scroll, listen,
               and vibe with viral moments, fresh clips, and creators you love.
-              Never miss a trend, a sound, or a moment everyone’s talking about
+              Never miss what everyone’s talking about.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-6  justify-center md:justify-start">
-              <button className="bg-orange-500 text-white px-8 py-4 rounded-sm  font-bold shadow-lg active:scale-95 transition cursor-pointer border-2 border-black ">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-4">
+              <button className="bg-orange-500 text-white px-8 py-4 rounded-sm font-bold shadow-lg active:scale-95 transition border-2 border-black">
                 Explore now
               </button>
 
-              <button className="bg-white px-8 py-4 rounded-sm font-bold text-slate-800  active:scale-95 cursor-pointer">
+              <button className="bg-white px-8 py-4 rounded-sm font-bold text-slate-800 active:scale-95 transition">
                 ▶ Watch clips
               </button>
             </div>
           </div>
 
-          {/* Visual / Image */}
-          <div className="relative">
-            <div className="w-[32vw] h-full  rounded-3xl bg-gradient-to-br from-orange-400 to-pink-400 shadow-2xl flex items-center justify-center rotate-3">
+          {/* Image */}
+          <div className="flex justify-center md:justify-end">
+            <div className="w-full max-w-sm sm:max-w-md aspect-[3/4] rounded-3xl bg-gradient-to-br from-orange-400 to-pink-400 shadow-2xl rotate-2 overflow-hidden">
               <img
                 src="/images/home.jpg"
-                className="w-full h-fit  "
                 alt="TikTok"
-              ></img>
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
+
         </div>
       </section>
-      {/* about */}
-      <section>
-        <AboutTikTub></AboutTikTub>
+
+      {/* ABOUT */}
+      <section className="mt-10">
+        <AboutTikTub />
       </section>
-      {/* section */}
-      <section>
-        {/* <CarouselTransition></CarouselTransition> */}
-        <VideoCarousel></VideoCarousel>
+
+      {/* ARTISTS */}
+      <section className="mt-10">
+        <ArtistGrid />
       </section>
-      <Footer></Footer>
+
+      {/* VIDEO CAROUSEL */}
+      <section className="mt-16">
+        <VideoCarousel />
+      </section>
+
+      <Footer />
     </div>
   );
 }
