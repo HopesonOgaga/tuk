@@ -12,10 +12,10 @@ function Home() {
 
       {/* HERO SECTION */}
       <section className="px-6 pt-20 pb-28">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center ">
 
           {/* Text */}
-          <div className="space-y-6 text-center md:text-left">
+          <div className="space-y-6 text-center md:text-left order-2 md:order-1" >
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-slate-900 leading-tight capitalize">
               listen on <br />
               tok<span className="text-orange-500">tub</span> 🎧
@@ -40,7 +40,7 @@ function Home() {
           </div>
 
           {/* Image */}
-          <div className="flex justify-center md:justify-end">
+          <div className="flex justify-center md:justify-end order-1 md:order-2">
             <div className="w-full max-w-sm sm:max-w-md aspect-[3/4] rounded-3xl bg-gradient-to-br from-orange-400 to-pink-400 shadow-2xl rotate-2 overflow-hidden">
               <img
                 src="/images/home.jpg"
@@ -54,12 +54,12 @@ function Home() {
       </section>
 
       {/* ABOUT */}
-      <section className="mt-10">
+      <section className="mt-10" id="about">
         <AboutTikTub />
       </section>
 
       {/* ARTISTS */}
-      <section className="mt-10">
+      <section className="mt-10" id="artist">
         <ArtistGrid />
       </section>
 
