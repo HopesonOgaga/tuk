@@ -1,0 +1,153 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #ffffff;
+  color: #1a202c;
+  margin: 0;
+  padding: 0;
+}
+
+
+:root {
+  /* Regal Navy */
+  --color-regal-navy-50: #e7f2fd;
+  --color-regal-navy-100: #cfe5fc;
+  --color-regal-navy-200: #a0cbf8;
+  --color-regal-navy-300: #70b0f5;
+  --color-regal-navy-400: #4096f2;
+  --color-regal-navy-500: #117cee;
+  --color-regal-navy-600: #0d63bf;
+  --color-regal-navy-700: #0a4a8f;
+  --color-regal-navy-800: #07325f;
+  --color-regal-navy-900: #031930;
+  --color-regal-navy-950: #021121;
+
+  /* Beige */
+  --color-beige-50: #f7f7ee;
+  --color-beige-100: #efefdc;
+  --color-beige-200: #dfdfb9;
+  --color-beige-300: #cfcf96;
+  --color-beige-400: #bfbf73;
+  --color-beige-500: #afaf50;
+  --color-beige-600: #8c8c40;
+  --color-beige-700: #696930;
+  --color-beige-800: #464620;
+  --color-beige-900: #232310;
+  --color-beige-950: #18180b;
+
+  /* Burnt Rose */
+  --color-burnt-rose-50: #f7eeee;
+  --color-burnt-rose-100: #eededd;
+  --color-burnt-rose-200: #debdba;
+  --color-burnt-rose-300: #cd9b98;
+  --color-burnt-rose-400: #bd7a75;
+  --color-burnt-rose-500: #ac5953;
+  --color-burnt-rose-600: #8a4742;
+  --color-burnt-rose-700: #673532;
+  --color-burnt-rose-800: #452421;
+  --color-burnt-rose-900: #221211;
+  --color-burnt-rose-950: #180c0c;
+
+  /* Sandy Brown */
+  --color-sandy-brown-50: #fdf2e8;
+  --color-sandy-brown-100: #fbe4d0;
+  --color-sandy-brown-200: #f6c9a2;
+  --color-sandy-brown-300: #f2ae73;
+  --color-sandy-brown-400: #ee9344;
+  --color-sandy-brown-500: #e97816;
+  --color-sandy-brown-600: #bb6011;
+  --color-sandy-brown-700: #8c480d;
+  --color-sandy-brown-800: #5d3009;
+  --color-sandy-brown-900: #2f1804;
+  --color-sandy-brown-950: #211103;
+
+  /* Tomato */
+  --color-tomato-50: #feeae6;
+  --color-tomato-100: #fdd6ce;
+  --color-tomato-200: #fcac9c;
+  --color-tomato-300: #fa836b;
+  --color-tomato-400: #f95939;
+  --color-tomato-500: #f73008;
+  --color-tomato-600: #c62606;
+  --color-tomato-700: #941d05;
+  --color-tomato-800: #631303;
+  --color-tomato-900: #310a02;
+  --color-tomato-950: #230701;
+}
+
+/* Tailwind v4 @theme mapping */
+@theme {
+  /* Regal Navy */
+  --regal-navy-50: var(--color-regal-navy-50);
+  --regal-navy-100: var(--color-regal-navy-100);
+  --regal-navy-200: var(--color-regal-navy-200);
+  --regal-navy-300: var(--color-regal-navy-300);
+  --regal-navy-400: var(--color-regal-navy-400);
+  --regal-navy-500: var(--color-regal-navy-500);
+  --regal-navy-600: var(--color-regal-navy-600);
+  --regal-navy-700: var(--color-regal-navy-700);
+  --regal-navy-800: var(--color-regal-navy-800);
+  --regal-navy-900: var(--color-regal-navy-900);
+  --regal-navy-950: var(--color-regal-navy-950);
+
+  /* Beige */
+  --beige-50: var(--color-beige-50);
+  --beige-100: var(--color-beige-100);
+  --beige-200: var(--color-beige-200);
+  --beige-300: var(--color-beige-300);
+  --beige-400: var(--color-beige-400);
+  --beige-500: var(--color-beige-500);
+  --beige-600: var(--color-beige-600);
+  --beige-700: var(--color-beige-700);
+  --beige-800: var(--color-beige-800);
+  --beige-900: var(--color-beige-900);
+  --beige-950: var(--color-beige-950);
+
+  /* Burnt Rose */
+  --burnt-rose-50: var(--color-burnt-rose-50);
+  --burnt-rose-100: var(--color-burnt-rose-100);
+  --burnt-rose-200: var(--color-burnt-rose-200);
+  --burnt-rose-300: var(--color-burnt-rose-300);
+  --burnt-rose-400: var(--color-burnt-rose-400);
+  --burnt-rose-500: var(--color-burnt-rose-500);
+  --burnt-rose-600: var(--color-burnt-rose-600);
+  --burnt-rose-700: var(--color-burnt-rose-700);
+  --burnt-rose-800: var(--color-burnt-rose-800);
+  --burnt-rose-900: var(--color-burnt-rose-900);
+  --burnt-rose-950: var(--color-burnt-rose-950);
+
+  /* Sandy Brown */
+  --sandy-brown-50: var(--color-sandy-brown-50);
+  --sandy-brown-100: var(--color-sandy-brown-100);
+  --sandy-brown-200: var(--color-sandy-brown-200);
+  --sandy-brown-300: var(--color-sandy-brown-300);
+  --sandy-brown-400: var(--color-sandy-brown-400);
+  --sandy-brown-500: var(--color-sandy-brown-500);
+  --sandy-brown-600: var(--color-sandy-brown-600);
+  --sandy-brown-700: var(--color-sandy-brown-700);
+  --sandy-brown-800: var(--color-sandy-brown-800);
+  --sandy-brown-900: var(--color-sandy-brown-900);
+  --sandy-brown-950: var(--color-sandy-brown-950);
+
+  /* Tomato */
+  --tomato-50: var(--color-tomato-50);
+  --tomato-100: var(--color-tomato-100);
+  --tomato-200: var(--color-tomato-200);
+  --tomato-300: var(--color-tomato-300);
+  --tomato-400: var(--color-tomato-400);
+  --tomato-500: var(--color-tomato-500);
+  --tomato-600: var(--color-tomato-600);
+  --tomato-700: var(--color-tomato-700);
+  --tomato-800: var(--color-tomato-800);
+  --tomato-900: var(--color-tomato-900);
+  --tomato-950: var(--color-tomato-950);
+}
